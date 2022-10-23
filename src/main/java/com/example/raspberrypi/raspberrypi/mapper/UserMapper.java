@@ -16,4 +16,5 @@ public interface UserMapper {
     @Insert("INSERT into user(id,username,password) VALUES (#{id},#{username},#{password})")
     boolean adduser(User user);
 
+
 }

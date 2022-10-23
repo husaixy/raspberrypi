@@ -26,7 +26,6 @@ public class UserH5controller {
     }
     @RequestMapping(value = "check_login",method = {RequestMethod. POST ,RequestMethod. GET })
     public User Check_LoginH5(HttpServletRequest request){
-        User user=new User();
         String username=request.getParameter("username");
         String password=request.getParameter("password");
 
