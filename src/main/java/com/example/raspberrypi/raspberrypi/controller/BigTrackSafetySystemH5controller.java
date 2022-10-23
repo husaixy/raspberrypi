@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+//成功提交
 @CrossOrigin(originPatterns = "*",allowCredentials = "true")
 @RestController//返回json数据给h5
 public class BigTrackSafetySystemH5controller {
