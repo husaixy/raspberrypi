@@ -18,12 +18,13 @@ public class UserH5controller {
         user.setId(String.valueOf(userService.idcount()+1));
             return userService.adduser(user);
     }
-    //删除，传个username
+    //删除，传个username,返回是个Boolean值
     @RequestMapping(value = "user_del",method = {RequestMethod. POST ,RequestMethod. GET })
     public  boolean userverifydel(User user, HttpServletRequest request){
         System.out.println(user.getUsername());
         return  userService.deluser(user.getUsername());
     }
+    //返回一个user
     @RequestMapping(value = "check_login",method = {RequestMethod. POST ,RequestMethod. GET })
     public User Check_LoginH5(HttpServletRequest request){
         String username=request.getParameter("username");

@@ -26,12 +26,12 @@ public class BigTrackSafetySystemH5controller {
         String week=request.getParameter("week");
         return safeCkeckService.SafetyweekList(week);
     }
-    //获取safety_long表里的全部数据
+    //返回一个safety对象
     @RequestMapping(value = "track_safety_system_current" ,method = {RequestMethod. POST ,RequestMethod. GET })
     public Safety trackSafetySystemH5(){
         return safeCkeckService.trackSafetySystem();
     }
-    //获取当前温度
+    //获取safety_long表里的全部数据返回一个list<Safety>
     @RequestMapping(value = "track_safety_system_list",method ={RequestMethod. POST ,RequestMethod. GET } )
     public List<Safety> trackSafetySystemListH5(){
         return safeCkeckService.trackSafetySystemList();

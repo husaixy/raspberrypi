@@ -5,15 +5,12 @@ public class Safety {
     private String temperature;
     private String insert_time;
     private String warning_flag;
-
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }
-
     public String getWarning_flag() {
         return warning_flag;
     }
@@ -23,13 +20,13 @@ public class Safety {
     public String getTemperature() {
         return temperature;
     }
-
     public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
-
     public String getInsert_time() {
-
         return insert_time;
+    }
+    public void setInsert_time(String insert_time) {
+        this.insert_time = insert_time;
     }
 }
