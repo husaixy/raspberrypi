@@ -16,8 +16,8 @@ public interface SafetyCheckMapper {
     @Select("SELECT id,temperature,insert_time,warning_flag FROM safety_long ")
     List<Safety> trackSafetySystemList();
 
-    @Select("select id,temperature,insert_time,warning_flag from safety_long WHERE (weekday(insert_time)+1) = #{week_date}")//取温度和对应的时间
-    List<Safety> trackSafetyWeekList(@Param("week_date") String week_date);
+    @Select("SELECT id,temperature,insert_time,warning_flag FROM safety_long WHERE insert_time LIKE '%${time}%'")//取温度和对应的时间
+    List<Safety> trackSafetyTimeList(@Param("time") String time);
 
     @Select("SELECT id,temperature,insert_time,warning_flag FROM safety")
     Safety trackSafetySystem();

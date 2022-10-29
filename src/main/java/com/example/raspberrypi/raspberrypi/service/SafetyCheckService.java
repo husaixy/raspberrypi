@@ -15,12 +15,10 @@ import java.util.List;
 public class SafetyCheckService {
     @Autowired
     private SafetyCheckMapper safetyCheckMapper;
-
-    //根据周几返回对应那天的温度数据
-    public List<Safety> SafetyweekList(String aweek){
+    public List<Safety> SafetytimeList(String aweek){
         List<Safety> list=null;
 
-        list =safetyCheckMapper.trackSafetyWeekList(aweek);
+        list =safetyCheckMapper.trackSafetyTimeList(aweek);
         if (list ==null){
             list =new ArrayList<Safety>();
             System.out.println("没有从数据库获取到数据....");

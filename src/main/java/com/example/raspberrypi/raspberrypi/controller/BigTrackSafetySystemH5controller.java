@@ -20,11 +20,12 @@ public class BigTrackSafetySystemH5controller {
     public String TestHtml(){
         return "test";
     }
-    //根据周几返回对应天的全部数据，前端参数名为week，若不一致请修改
-    @RequestMapping(value = "track_safety_week_list" ,method = {RequestMethod. POST ,RequestMethod. GET })
-    public List <Safety> trackSafetyWeekH5(HttpServletRequest request){
-        String week=request.getParameter("week");
-        return safeCkeckService.SafetyweekList(week);
+    //根据日期返回对应天的全部数据，前端参数名为date，若不一致请修改
+    @RequestMapping(value = "track_safety_time_list" ,method = {RequestMethod. POST ,RequestMethod. GET })
+    public List <Safety> trackSafetyTimeH5(HttpServletRequest request){
+        String date=request.getParameter("date");
+        System.out.println("date:"+date);
+        return safeCkeckService.SafetytimeList(date);
     }
     //返回一个safety对象
     @RequestMapping(value = "track_safety_system_current" ,method = {RequestMethod. POST ,RequestMethod. GET })
