@@ -2,13 +2,17 @@ package com.example.raspberrypi.raspberrypi.service;
 
 import com.example.raspberrypi.raspberrypi.entity.User;
 import com.example.raspberrypi.raspberrypi.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    @Autowired
-    private UserMapper userMapper;
+    private final UserMapper userMapper;
+
+    public UserService(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+
     public User findByName(String name, String pwd)
     {
         System.out.println("service");

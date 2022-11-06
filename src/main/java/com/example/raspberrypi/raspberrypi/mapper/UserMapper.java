@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
     @Select("SELECT * FROM user where  username=#{u} and password=#{p}")
-    User  queryuser(@Param("u") String username,@Param("p") String password);
+    User queryuser(@Param("u") String username, @Param("p") String password);
     @Select("SELECT count(*) FROM user")
     int countid();
     @Delete("DELETE FROM user WHERE username = #{username}")
